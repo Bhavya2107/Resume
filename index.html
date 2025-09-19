@@ -1,114 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <link rel="stylesheet" href="C:\Users\bhavy\OneDrive\OneDrive\Desktop\New Project\style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bhavya H. Prajapati - Resume</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-image: url('https://storage.googleapis.com/gfg-prod-images/uploaded_files/1715423851080-IMG20241007223056%20%281%29.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-color: #f3f4f6;
+        }
+
+        .resume-container {
+            max-width: 900px;
+            margin: 2rem auto;
+            background-color: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 2rem;
+        }
+
+        .section-title {
+            position: relative;
+            font-weight: 700;
+            color: #1f2937;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 50px;
+            background-color: #4f46e5;
+            border-radius: 9999px;
+        }
+
+        .contact-icon {
+            color: #4f46e5;
+            min-width: 24px;
+        }
+
+        .animated-box {
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
+<body class="p-4 sm:p-8 md:p-12">
+    <div class="resume-container">
+        <!-- Header Section -->
+        <header class="flex flex-col sm:flex-row items-center sm:items-start justify-between mb-8">
+            <div class="text-center sm:text-left">
+                <h1 class="text-5xl sm:text-6xl font-extrabold text-gray-900 leading-tight">Bhavya H. Prajapati</h1>
+                <h4 class="text-xl sm:text-2xl text-gray-600 mt-2 font-semibold">Python Developer / Mobile Application</h4>
+            </div>
+            <!-- Profile Image (Placeholder) -->
+            <div class="mt-6 sm:mt-0 flex-shrink-0">
+                <img src="C:\Users\bhavy\OneDrive\OneDrive\Desktop\New Project\Photo.jpg" alt="Profile Picture" class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover shadow-lg border-4 border-white">
+            </div>
+        </header>
 
-<body>
-    <h1 class="resume-title">Bhavya Hasamukhbhai Prajapati</h1>
-    <hr style="border: none; height: 2px; background-color: black;">
-    <div class="container">
-        <div class="box">
-            <p><strong>Contact : </strong>+91 88490 39833</p>
-        </div>
-        <div class="box">
-            <p><strong>Email : </strong>
-                <a href="#" onclick="copyEmail()">bhavyahprajapati2107@gmail.com</a>
-            </p>
-            <script>
-                function copyEmail() {
-                    navigator.clipboard.writeText("bhavyahprajapati2107@gmail.com");
-                }
-            </script>
-        </div>
-        <div class="box">
-            <p><strong>LinkedIn : </strong>
-                <a href="https://www.linkedin.com/in/bhavya-prajapati-53b45a25a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                    target="_blank">
-                    linkedin.com/in/bhavya-prajapati-53b45a25a
+        <!-- Contact Section -->
+        <section class="flex flex-col gap-4 mb-8 text-gray-700">
+            <div class="flex items-center space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="contact-icon h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M14.243 5.757a6 6 0 10-.986 9.171.75.75 0 01-1.002-1.12l.142-.2a4.5 4.5 0 11.758-6.551l-.25-.25a.75.75 0 011.06-1.06l.25.25a6 6 0 00-.758 6.551l-.142-.2a.75.75 0 01-1.002-1.12z" clip-rule="evenodd" />
+                    <path d="M5.757 14.243a6 6 0 10.986-9.171.75.75 0 011.002 1.12l-.142.2a4.5 4.5 0 11-.758 6.551l.25.25a.75.75 0 01-1.06 1.06l-.25-.25a6 6 0 00.758-6.551l.142-.2a.75.75 0 01-1.002-1.12z" />
+                </svg>
+                <p>+91 88490 39833</p>
+            </div>
+            <div class="flex items-center space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="contact-icon h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M2.003 5.884L10 11l7.997-5.116A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                    <path d="M18 8.118l-8 5.115-8-5.115V15a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                </svg>
+                <p class="overflow-hidden whitespace-nowrap overflow-ellipsis">bhavyahprajapati2107@gmail.com</p>
+            </div>
+            <div class="flex items-center space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="contact-icon h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M16 4h2a2 2 0 012 2v10a2 2 0 01-2 2H2a2 2 0 01-2-2V6a2 2 0 012-2h2.5L7 2h6l2.5 2H16zM5 8v6h10V8H5z" />
+                </svg>
+                <a href="https://www.linkedin.com/in/bhavya-prajapati-53b45a25a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="text-blue-600 hover:underline overflow-hidden whitespace-nowrap overflow-ellipsis">
+                    linkedin.com/in/bhavya-prajapati
                 </a>
+            </div>
+        </section>
+
+        <hr class="my-8 border-gray-300">
+
+        <!-- Summary Section -->
+        <section class="animated-box" style="animation-delay: 0.2s;">
+            <h2 class="section-title text-2xl">Summary</h2>
+            <p class="text-gray-700 leading-relaxed">
+                Highly motivated and results-oriented individual with a strong foundation in web development fundamentals,
+                including HTML, CSS, and JavaScript. Eager to contribute to a fast-paced environment and learn from
+                experienced professionals. Currently focused on developing React skills through personal projects and online
+                courses.
             </p>
-        </div>
-        <div class="box">
-            <p><strong>DOB : </strong>March 15, 2004</p>
-        </div>
-        <div class="box">
-            <p><strong>Address : </strong>Ahmedabad, Gujarat, India</p>
-        </div>
+        </section>
+
+        <!-- Main Content 2x2 Grid -->
+        <section class="mt-8 animated-box" style="animation-delay: 0.4s;">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-4">
+                <!-- Skills Box -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-inner">
+                    <h2 class="section-title text-xl">Skills</h2>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700">
+                        <li>Python (Basics, Problem Solving)</li>
+                        <li>HTML & CSS (Web Development Fundamentals)</li>
+                        <li>Git & GitHub (Version Control)</li>
+                        <li>Java (Core Concepts)</li>
+                        <li>SQL (Database Management)</li>
+                        <li>Communication & Teamwork</li>
+                    </ul>
+                </div>
+
+                <!-- Focus Box -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-inner">
+                    <h2 class="section-title text-xl">Focus</h2>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700">
+                        <li>Security Basics</li>
+                        <li>Clean Code Practices</li>
+                        <li>Problem Solving & Debugging)</li>
+                        <li>Web Development (HTML, CSS, JavaScript)</li>
+                        <li>Java & Python Programming</li>
+                        <li>Database Management (MySQL, Oracle)</li>
+                        <li>Team Collaboration & Communication</li>
+                    </ul>
+                </div>
+                
+                <!-- Core Values Box -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-inner">
+                    <h2 class="section-title text-xl">Core Values</h2>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700">
+                        <li>Sustainability – Committed to eco-friendly practices</li>
+                        <li>Teamwork – Collaborative, supportive, and open</li>
+                        <li>Integrity – Honest, reliable, and consistent</li>
+                        <li>Continuous Learning – Always eager to grow</li>
+                        <li>Innovation – Strive for creative solutions</li>
+                    </ul>
+                </div>
+
+                <!-- Education Box -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-inner">
+                    <h2 class="section-title text-xl">Education</h2>
+                    <div class="space-y-4 text-gray-700">
+                        <div>
+                            <h3 class="font-semibold text-lg">Bachelor of Computer Applications</h3>
+                            <p class="text-gray-600">HNGU – Mehsana, Gujarat</p>
+                            <p class="text-sm italic">March 2024</p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg">Higher Secondary Certificate</h3>
+                            <p class="text-gray-600">L.S. High School – Siddhpur, Gujarat</p>
+                            <p class="text-sm italic">Stream: Science (A) - May 2021</p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg">Secondary School Certificate</h3>
+                            <p class="text-gray-600">M. P. High School – Siddhpur, Gujarat</p>
+                            <p class="text-sm italic">March 2019</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section class="mt-8 animated-box" style="animation-delay: 0.6s;">
+            <div class="bg-gray-50 p-6 rounded-xl shadow-inner">
+                <h2 class="section-title text-xl">Certifications</h2>
+                <div class="space-y-4 text-gray-700">
+                    <div>
+                        <h3 class="font-semibold text-lg">CodeAlpha Virtual Internship Program</h3>
+                        <p class="text-gray-600">Python Programming Internship</p>
+                        <p class="text-sm italic">August 2025</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg">Web Development Fundamentals</h3>
+                        <p class="text-gray-600">Issued by IBM SkillsBuild</p>
+                        <p class="text-sm italic">Issued on: July 14, 2025</p>
+                        <a href="https://www.credly.com/badges/e06d0f4a-c7fb-432d-a9d8-1479661b27e2" target="_blank" class="text-blue-600 hover:underline text-sm">Verify Credly Badge</a>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg">Click, Code, Create: Beginner's Guide to Front End Web Development</h3>
+                        <p class="text-gray-600">IBM SkillsBuild & CSRBOX</p>
+                        <p class="text-sm italic">July - August 2025</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="mt-8 animated-box" style="animation-delay: 0.8s;">
+            <div class="bg-gray-50 p-6 rounded-xl shadow-inner">
+                <h2 class="section-title text-xl">Projects</h2>
+                <div class="space-y-4 text-gray-700">
+                    <div>
+                        <h3 class="font-semibold text-lg">BCA Project - Online Auto Consult</h3>
+                        <p class="text-gray-600">A web application for buying and selling cars online.</p>
+                        <ul class="list-disc list-inside mt-2 space-y-1 text-gray-700">
+                            <li><b>Objective : </b>To create a platform where customers can order cars and sellers can manage inventory and orders.</li>
+                            <li><b>Key Modules : </b> Admin module (Manage Cars, View Orders, Manage Users) and Customer module (View Cars, Place Orders).</li>
+                            <li><b>Technologies : </b> Microsoft Visual Studio 2012, .NET Framework 4.0.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </div>
-    <hr style="border: none; height: 2px; background-color: black;">
-
-    <section id="about" aria-labelledby="about-title" class="about">
-        <h2 id="about-title">Summary</h2>
-        <p>
-            Highly motivated and results-oriented individual with a strong foundation in web development fundamentals,
-            including HTML, CSS, and JavaScript. Eager to contribute to a fast-paced environment and learn from
-            experienced professionals. Currently focused on developing React skills through personal projects and online
-            courses.
-        </p>
-
-    </section>
-    <hr style="border: none; height: 2px; background-color: black;">
-    <section id="about" aria-labelledby="about-title" class="about">
-        <h2 id="about-title">Education</h2>
-
-        <p>
-            <strong>• Bachelor of Computer Applications</strong><br>
-            &nbsp;&nbsp;HNGU– Mehsana, Gujarat : <em>March 2024</em><br>
-        <P></P>
-
-        <strong>• Higher Secondary Certificate</strong><br>
-        &nbsp;&nbsp;L.S. High School – Siddhpur, Gujarat<br>
-        &nbsp;&nbsp;<em>Stream: Science(A) : May 2021</em>
-        <br>
-        <P></P>
-
-        <strong>• Secondary School Certificate</strong><br>
-        &nbsp;&nbsp;M. P. High School – Siddhpur, Gujarat<br>
-        &nbsp;&nbsp;<em>Year of Completion: March 2019</em>
-        </p>
-
-    </section>
-    <hr style="border: none; height: 2px; background-color: black;">
-    <div class="skills">
-        <h2 class="skills-title">Skills</h2><br>
-        • Python (Basics, Problem Solving)<br>
-        • HTML & CSS (Web Development Fundamentals)<br>
-        • Git & GitHub (Version Control)<br>
-        • Java (Core Concepts)<br>
-        • SQL (Database Management)<br>
-        • Communication & Teamwork
-    </div>
-
-    <hr style="border: none; height: 2px; background-color: black;">
-    <div class="skills">
-        <h2 class="skills-title">Focus</h2><br>
-
-        • Security Basics<br>
-        • Clean Code Practices<br>
-        • Problem Solving & Debugging<br>
-        • Web Development (HTML, CSS, JavaScript)<br>
-        • Java & Python Programming<br>
-        • Database Management (MySQL, Oracle)<br>
-        • Team Collaboration & Communication<br>
-    </div>
-    <hr style="border: none; height: 2px; background-color: black;">
-    <div class="skills">
-        <h2 class="skills-title">Core Values</h2><br>
-        • Sustainability – Committed to eco-friendly practices and mindful resource use<br>
-        • Teamwork – Collaborative, supportive, and open to diverse perspectives<br>
-        • Integrity – Honest, reliable, and consistent in all responsibilities<br>
-        • Continuous Learning – Always eager to grow and adapt to new challenges<br>
-        • Innovation – Strive for creative solutions and forward-thinking approaches
-    </div>
-    <hr style="border: none; height: 2px; background-color: black;">
-
 </body>
-
-</html>
-
 </html>
